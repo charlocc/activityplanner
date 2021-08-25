@@ -4,12 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <title>SoCal Activities Planner</title>
 </head>
 <body>
-    <header>
-        <h1>Activity Planner</h1>
-    </header>
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container">
+        <a href="#" class="navbar-brand">SoCal Activities Planner</a>
+        
+        <button 
+            class="navbar-toggler collapsed" 
+            type = "button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navmenu">
+            
+            <span class="navbar-toggler-icon"></span>
+        </button>
+           
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light">Entertainment</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light">Nature</a>
+                </li> <li class="nav-item">
+                    <a href="#" class="nav-link text-light">Food</a>
+                </li>
+            </ul>
+        </div>
+      </div>
+  </nav>
     <section class="search-page">
         <h2>Search for a city!</h2>
         <form id="search-form">
@@ -18,5 +46,6 @@
         </form>
     </section>
    <script src="./assets/js/script.js"></script> 
+ </main>
 </body>
 </html>
