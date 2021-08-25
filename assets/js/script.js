@@ -21,7 +21,7 @@ function handleSearchFormSubmit(event) {
 }
 
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
-
+var stateName = document.querySelector(".state-name");
 
 function searchWeatherApi(city){
     var weatherURL = `https://weatherapi-com.p.rapidapi.com/current.json?q=${city}`
@@ -40,8 +40,8 @@ function searchWeatherApi(city){
     })
     .then(function(data){
         console.log(data)
+        stateName.textContent=data.location.region;
+        console.log(stateName);
     })
-    var stateName = document.querySelector(".state-name");
-    stateName.textContent=location.region;
-    console.log(stateName);
+
 }
