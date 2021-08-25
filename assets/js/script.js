@@ -5,7 +5,7 @@ var stateCodeEl = document.querySelector(".state-code");
 
 // Search function
 var searchFormEl = document.querySelector('#search-form');
-
+console.log(searchFormEl)
 function handleSearchFormSubmit(event) {
   event.preventDefault();
 
