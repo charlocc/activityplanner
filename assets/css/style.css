@@ -40,6 +40,8 @@ footer {
     left: 40%;
   }
 
+
+
 .california{
       color: var(--mikado-yellow)
   }
@@ -49,6 +51,9 @@ footer {
 }
 
 #search-style {
+  background-color: var(--gold-web-golden);
+}
+#search-style-favorites {
   background-color: var(--gold-web-golden);
 }
 
@@ -78,6 +83,13 @@ footer {
   background-position: 25% 25%; 
   background-size: cover;
 
-  /* background-color: var(--gold-web-golden); */
+}
+
+.favorites-main{
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1514939775307-d44e7f10cabd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+  background-repeat: no-repeat;
+  background-position: 25% 25%; 
+  background-size: cover;
 
 }
