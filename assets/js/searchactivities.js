@@ -1,7 +1,7 @@
 var stateCode = ""
 console.log("hello")
 // Search Weather API for city temperature and state name 
-
+var weatherResultsEl =document.querySelector(".weather-results")
 var storedCity = localStorage.getItem('searchedCity');
 searchWeatherApi(storedCity);
 
@@ -40,6 +40,19 @@ function searchWeatherApi(city){
             })
             .then(data => {
                 console.log(data);
+                for (var i=0; i<4; i++) {
+                var container = document.createElement('div');
+                var parkName = document.createElement("h3");
+                var parkDescription = document.createElement("p");
+                parkName.textContent=data.data[i].name;
+                parkDescription.textContent=data.data[i].description;
+                container.appendChild(parkName);
+                container.appendChild(parkDescription);
+                weatherResultsEl.appendChild(container);
+                container.style.border = "solid black 2px";
+                container.style.backgroundColor = "dark";
+                container.style.margin = "2px";
+                }
             })
             .catch(err => {
                 console.error(err);
