@@ -59,11 +59,13 @@ function searchWeatherApi(city){
                     var container = document.createElement('div');
                     var parkName = document.createElement("h3");
                     var parkDescription = document.createElement("p");
+                    var saveParkBtn = document.createElement("button");
                     parkName.textContent=data.data[i].name;
-                        
                     parkDescription.textContent=data.data[i].description;
+                    saveParkBtn.textContent="Favorite";
                     container.appendChild(parkName);
                     container.appendChild(parkDescription);
+                    container.appendChild(saveParkBtn);
                     parkResultsEl.appendChild(container);
                     container.style.border = "solid black 2px";
                     container.style.backgroundColor = "dark";
@@ -188,4 +190,26 @@ function findStateCode(stateName) {
     console.log(stateCode);
     return stateCode
 }
+
+var searchFormEl = document.querySelector('.search-form');
+
+function handleSearchFormSubmit(event) {
+  event.preventDefault();
+
+  var searchInputVal = document.querySelector('#search-input').value.trim();
+
+  if (!searchInputVal) {
+    console.error('Please input city name');
+    return;
+    }
+
+    var searchedCity = localStorage.setItem('searchedCity', searchInputVal);
+    
+    document.location.href = 'searchactivities.html'; 
+}
+
+searchFormEl.addEventListener('submit', handleSearchFormSubmit);
+
+
+var local = localStorage.getItem("submit")
 
