@@ -1,7 +1,8 @@
 var stateCode = ""
-console.log("hello")
+
 // Search Weather API for city temperature and state name 
-var weatherResultsEl =document.querySelector(".weather-results")
+var weatherResultsEl = document.querySelector(".weather-results");
+var parkResultsEl =document.querySelector(".park-results");
 var storedCity = localStorage.getItem('searchedCity');
 searchWeatherApi(storedCity);
 
@@ -23,9 +24,22 @@ function searchWeatherApi(city){
         console.error(err);
     })
     .then(function(data){
+        // Populate the temperature and conditions on the screen
         console.log(data)
+        weatherResultsEl.textContent ="";
+        var container = document.createElement('div');
+        var temperature = document.createElement("h1");
+        var conditions = document.createElement("h4");
+        temperature.textContent = data.current.temp_f + " °F";
+        conditions.textContent = data.current.condition.text;
+        container.appendChild(temperature);
+        container.appendChild(conditions);
+        weatherResultsEl.appendChild(container);
+        container.style.color = "#001d3dff";
+    
+       
+        // Find parks in the region
         var stateName=data.location.region;
-        var cityTemp =data.current.temp_f;
         findStateCode(stateName)
             var nationalParkURL = `https://jonahtaylor-national-park-service-v1.p.rapidapi.com/campgrounds?stateCode=${stateCode}`
             fetch(nationalParkURL, {
@@ -40,18 +54,24 @@ function searchWeatherApi(city){
             })
             .then(data => {
                 console.log(data);
-                for (var i=0; i<4; i++) {
-                var container = document.createElement('div');
-                var parkName = document.createElement("h3");
-                var parkDescription = document.createElement("p");
-                parkName.textContent=data.data[i].name;
-                parkDescription.textContent=data.data[i].description;
-                container.appendChild(parkName);
-                container.appendChild(parkDescription);
-                weatherResultsEl.appendChild(container);
-                container.style.border = "solid black 2px";
-                container.style.backgroundColor = "dark";
-                container.style.margin = "2px";
+                if(data.data) {
+                    for (var i=0; i<4; i++) {
+                    var container = document.createElement('div');
+                    var parkName = document.createElement("h3");
+                    var parkDescription = document.createElement("p");
+                    parkName.textContent=data.data[i].name;
+                        
+                    parkDescription.textContent=data.data[i].description;
+                    container.appendChild(parkName);
+                    container.appendChild(parkDescription);
+                    parkResultsEl.appendChild(container);
+                    container.style.border = "solid black 2px";
+                    container.style.backgroundColor = "dark";
+                    container.style.margin = "2px";
+                    } 
+                } else {
+                    parkResultsEl.textContent= "Sorry no parks found in your area! Please search a different city!"
+                    parkResultsEl.style.fontSize= "24px";
                 }
             })
             .catch(err => {
