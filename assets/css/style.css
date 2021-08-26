@@ -4,6 +4,7 @@
     --prussian-blue: #003566ff;
     --mikado-yellow: #ffc300ff;
     --gold-web-golden: #ffd60aff;
+    --orange: #f77f00ff;
 }
 .overlay
 {
@@ -39,4 +40,38 @@ footer {
 
 .lead{
    font-weight: 300;
+}
+
+#search-style {
+  background-color: var(--gold-web-golden);
+}
+
+.card{
+  background-color:var(--oxford-blue);
+  opacity: .8;
+}
+.card2{
+  background-color: rgba(22, 138, 173, .4);
+}
+.card3{
+  color:white;
+  background-color:  rgba(234, 226, 183, .6);  
+
+}
+
+.card,
+.card2,
+.card3{
+  min-height: 100vh;
+}
+
+#search-main{
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1584389109385-8810abee096b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80');
+  background-repeat: no-repeat;
+  background-position: 25% 25%; 
+  background-size: cover;
+
+  /* background-color: var(--gold-web-golden); */
+
 }
