@@ -1,4 +1,7 @@
 
+var stateNameEl = document.querySelector(".state-name");
+var cityTempEl = document.querySelector(".city-temp");
+var stateCodeEl = document.querySelector(".state-code");
 
 // Search function
 var searchFormEl = document.querySelector('.search-form');
@@ -11,16 +14,18 @@ function handleSearchFormSubmit(event) {
   if (!searchInputVal) {
     console.error('Please input city name');
     return;
-  }
+    }
 
-  var stored = localStorage.setItem('searchedCities', searchInputVal);
-  console.log(stored);
-
-  document.location.href = 'searchactivities.html';
+    var searchedCity = localStorage.setItem('searchedCity', searchInputVal);
+    
+    document.location.href = 'searchactivities.html'; 
 }
 
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 
+
 var local = localStorage.getItem("submit")
+
+
 
 
