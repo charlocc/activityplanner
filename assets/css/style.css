@@ -6,10 +6,10 @@
     --gold-web-golden: #ffd60aff;
     --orange: #f77f00ff;
 
-    --sky-blue-crayola: rgba(72, 202, 228, .8);
-    --sky-blue-crayola-2: rgba(144, 224, 239, .8);
-    --blizzard-blue: rgba(173, 232, 244, .8);
-    --powder-blue: rgba(202, 240, 248, .8);
+    --sky-blue-crayola: rgba(72, 202, 228, .6);
+    --sky-blue-crayola-2: rgba(144, 224, 239, .6);
+    --blizzard-blue: rgba(173, 232, 244, .7);
+    --powder-blue: rgba(202, 240, 248, .7);
 }
 .overlay
 {
