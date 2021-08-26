@@ -4,45 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">  
     <link rel="stylesheet" href="assets\css\style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-   
-    <title>Discover SoCal</title>
+ 
+    <title>Discover California</title>
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&display=swap');
     </style>
+
 </head>
 
-<body>
+<body> 
 
-  <nav class = "navbar navbar-expand-lg bg-dark navbar-dark">
-      <div class = "container">
+        <!-- Navbar -->
+  <nav class = "navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top" style = "z-index: 900;">
+      
+    <div class = "container">
         <a href = "#" class="navbar-brand">Discover California</a>
         
+        <!-- Hamburger Menu -->
         <button 
             class = "navbar-toggler collapsed" 
             type = "button" 
             data-bs-toggle = "collapse" 
             data-bs-target = "#navmenu">
-            
             <span class = "navbar-toggler-icon"></span>
         </button>
            
+        <!-- Menu Options -->
         <div class = "collapse navbar-collapse" id = "navmenu">
-            <ul class = "navbar-nav ml-auto">
+            <ul class = "navbar-nav ms-auto">
                 <li class = "nav-item">
                     <a href = "#" class = "nav-link text-light">Entertainment</a>
                 </li>
                 <li class = "nav-item">
-                    <a href ="#" class="nav-link text-light">Nature</a>
+                    <a href ="#" class="nav-link text-light">Food</a>
                 </li> <li class ="nav-item">
-                    <a href = "#" class = "nav-link text-light">Food</a>
+                    <a href = "#" class = "nav-link text-light">Weather</a>
+                </li>
+                <li class = "nav-item">
+                    <a href = "#" class = "nav-link text-light">Favorites</a>
                 </li>
             </ul>
         </div>
       </div>
   </nav>
 
+
+        <!-- Video Background -->
+    <video src="assets\images\pexels-arthouse-studio-8494842.mp4" height="1000" muted loop autoplay></video>
+
+   
+         <!-- Main Section -->
+    <section class="text-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-start overlay ">
+        <div class="container mt-5">
+            <div class="d-sm-flex align-items-center justify-content-between">
+
+                <div>
+                    <h1>Discover <span class="california">California </span></h1>
+                    <p class="paragraph lead my-4">
+                    Plan your perfect day. Search for places, activities, and weather conditions. Just type in a city you want to visit to get started. 
+                    </p>
+
+        <!-- Search Section -->
+                    <section class="search-page text-dark p-5">
+                        <div class="container">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <h3 class="mb-3 mb-md-0 ">Start Your Search</h3>
+                    
+                                <form class="input-group search-form news-input">
+                                    <input id="search-input" type="text" class="form-control" placeholder="Santa Monica" />
+                                    <button class="btn btn-dark btn-lg" type="button">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                    </section> 
+        <!-- End Search Section -->
+
+                </div>  
+            </div>        
+        </div>
+=======
   <div class="bg-image" style="
      background-image: url('https://mdbootstrap.com/img/new/slides/003.jpg');
       height: 100vh;
@@ -118,205 +161,27 @@
     </div>  
       </div>
 
-</div>
 
-  <!-- Two column layout with a grid in the left column
-  <section class="container my-5 bg-dark text-light">
-    <div class="row">
+        <footer>
+            <p style="font-weight:200">Copyright &copy; 2021 Gold Rush LLC</p>
+        </footer>
         
-      <div class="col-12 col-md-8 col-xl-9">
-        <h3>Main Content</h3>
-        <h5>9/12 columns on large screens, 8/12 columns on medium screens, 12/12 (full-width) on small
-          screens</h5>
-
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-4">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores blanditiis temporibus facilis cumque
-              corporis illum, in dolorum? Ad, sed nulla adipisci vel repellendus facere hic rerum veritatis quia
-              reprehenderit velit?
-            </p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores blanditiis temporibus facilis cumque
-              corporis illum, in dolorum? Ad, sed nulla adipisci vel repellendus facere hic rerum veritatis quia
-              reprehenderit velit?
-            </p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores blanditiis temporibus facilis cumque
-              corporis illum, in dolorum? Ad, sed nulla adipisci vel repellendus facere hic rerum veritatis quia
-              reprehenderit velit?
-            </p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores blanditiis temporibus facilis cumque
-              corporis illum, in dolorum? Ad, sed nulla adipisci vel repellendus facere hic rerum veritatis quia
-              reprehenderit velit?
-            </p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores blanditiis temporibus facilis cumque
-              corporis illum, in dolorum? Ad, sed nulla adipisci vel repellendus facere hic rerum veritatis quia
-              reprehenderit velit?
-            </p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores blanditiis temporibus facilis cumque
-              corporis illum, in dolorum? Ad, sed nulla adipisci vel repellendus facere hic rerum veritatis quia
-              reprehenderit velit?
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-4 col-xl-3">
-        <h3>Sidebar Content</h3>
-        <ul>
-          <li>Spans 3 / 12 columns on large screens</li>
-          <li>Spans 4 / 12 columns on medium screens</li>
-          <li>Spans 12 / 12 (full-width) on smaller screens</li>
-        </ul>
-      </div>
-    </div>
-  </section> -->
+</section>
+        <!-- End Main Section -->
     
 
-    <!-- <div id = "carousel" class = "carousel slide carousel-fade" data-ride = "carousel">
-        <div class = "carousel-inner" role = "listbox">
-            
-            <div class = "carousel-item active">
-                <img class = "d-block w-auto img-fluid" src="assets\images\IMG_3890.JPG" alt="">
-                <div class = "carousel-caption">
-                    <h1>California</h1>
-                    <p>Discover</p>
-                </div>    
-            </div>
-        
-            <div class = "carousel-item">
-                <img class = "d-block w-100 img-fluid" src="assets\images\IMG_3900.JPG" alt="">
-                <div class = "carousel-caption"></div>
-                    <h1>Adventure Awaits</h1>
-                     <p>Plan</p>
-                 </div>
-            </div>     
 
-            <div class = "carousel-item">
-                <img class = "d-block w-100 img-fluid" src="assets\images\IMG_E3732.JPG" alt="">
-                <div class = "carousel-caption"></div>
-                    <h1>More Places</h1>
-                    <p>Start</p>
-                </div>
-            </div>   
-        </div>
-    </div>   -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="./assets/js/script.js"></script> 
 
-    <!-- <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
+        <!-- Performs Top-Anchored Page Reload -->
+<script>
+    $(document).ready(function(){
+       $(window).scrollTop(0);
+   });
+   </script>
 
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="assets\images\IMG_3890.JPG" alt="First slide">
-            </div>
-
-            <div class="carousel-item">
-                <img class="d-block w-100" src="assets\images\IMG_3900.JPG" alt="Second slide">
-            </div>
-
-            <div class="carousel-item">
-                <img class="d-block w-100" src="assets\images\IMG_E3732.JPG" alt="Third slide">
-            </div>
-
-        </div>
-
-    </div>
-    </div> -->
-
-
-    <!-- <section class="border p-4 text-center mb-4">
-        <div
-          id="carouselExampleCrossfade"
-          class="carousel slide carousel-fade"
-          data-mdb-ride="carousel"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-mdb-target="#carouselExampleCrossfade"
-              data-mdb-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-mdb-target="#carouselExampleCrossfade"
-              data-mdb-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-mdb-target="#carouselExampleCrossfade"
-              data-mdb-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/slides/041.jpg"
-                class="d-block w-100"
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/slides/042.jpg"
-                class="d-block w-100"
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/slides/043.jpg"
-                class="d-block w-100"
-                alt="..."
-              />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-mdb-target="#carouselExampleCrossfade"
-            data-mdb-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-mdb-target="#carouselExampleCrossfade"
-            data-mdb-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </section -->
-
-
-<!-- </div>   -->
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   
-   <script src="./assets/js/script.js"></script> 
- </main>
 </body>
 </html>
