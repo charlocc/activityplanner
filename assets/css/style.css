@@ -5,6 +5,11 @@
     --mikado-yellow: #ffc300ff;
     --gold-web-golden: #ffd60aff;
     --orange: #f77f00ff;
+
+    --sky-blue-crayola: rgba(72, 202, 228, .8);
+    --sky-blue-crayola-2: rgba(144, 224, 239, .8);
+    --blizzard-blue: rgba(173, 232, 244, .8);
+    --powder-blue: rgba(202, 240, 248, .8);
 }
 .overlay
 {
@@ -69,7 +74,19 @@ footer {
   background-color:  rgba(234, 226, 183, .6);  
 
 }
+.fav-card-style1{
+  background-color: var(--powder-blue);
+}
 
+.fav-card-style2{
+  background-color: var(--blizzard-blue);
+}
+.fav-card-style3{
+  background-color: var(--sky-blue-crayola-2);
+}
+.fav-card-style4{
+  background-color: var(--sky-blue-crayola);
+}
 .card,
 .card2,
 .card3{
