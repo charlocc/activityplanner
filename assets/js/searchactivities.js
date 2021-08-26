@@ -30,8 +30,10 @@ function searchWeatherApi(city){
         var container = document.createElement('div');
         var temperature = document.createElement("h1");
         var conditions = document.createElement("h4");
+        // Set text content to correspdoning data
         temperature.textContent = data.current.temp_f + " °F";
         conditions.textContent = data.current.condition.text;
+        // Add data to the container
         container.appendChild(temperature);
         container.appendChild(conditions);
         weatherResultsEl.appendChild(container);
@@ -60,16 +62,23 @@ function searchWeatherApi(city){
                     var parkName = document.createElement("h3");
                     var parkDescription = document.createElement("p");
                     var saveParkBtn = document.createElement("button");
+                    // Set text content to correspdoning data
                     parkName.textContent=data.data[i].name;
                     parkDescription.textContent=data.data[i].description;
-                    saveParkBtn.textContent="Favorite";
+                    saveParkBtn.textContent="Add to favorites";
+                    // Add data to the container
                     container.appendChild(parkName);
                     container.appendChild(parkDescription);
                     container.appendChild(saveParkBtn);
                     parkResultsEl.appendChild(container);
+                    // Container style
                     container.style.border = "solid black 2px";
-                    container.style.backgroundColor = "dark";
-                    container.style.margin = "2px";
+                    container.style.margin = "10px";
+                    container.style.padding = "10px";
+                    // Button style
+                    saveParkBtn.style.color = "#001d3dff";
+                    saveParkBtn.style.backgroundColor = "white";
+                    saveParkBtn.style.borderRadius = "9px";
                     } 
                 } else {
                     parkResultsEl.textContent= "Sorry no parks found in your area! Please search a different city!"
