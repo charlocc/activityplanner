@@ -1,7 +1,7 @@
 
 
 // Search function
-var searchFormEl = document.querySelector('#search-form');
+var searchFormEl = document.querySelector('.search-form');
 
 function handleSearchFormSubmit(event) {
   event.preventDefault();
@@ -20,3 +20,7 @@ function handleSearchFormSubmit(event) {
 }
 
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
+
+var local = localStorage.getItem("submit")
+
+
