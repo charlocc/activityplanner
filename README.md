@@ -1,4 +1,4 @@
-## TITLE
+# TITLE
     American Activities Planner - Discover America
 
 ## DESCRIPTION
@@ -23,9 +23,30 @@
         •	Github issue tracking. 
 
 
+## INSTALLATION
+    This is a web-based application and as such requires no installation. Users navigate to the url for access.
 
-## User Story 
+## USAGE
+    The core of the application is meant to serve as a search engine pertinent to tourists. 
+    Instructions for use are printed on the landing page (home screen) url. 
+    Further, users are able to 'favorite' items by clicking on the 'add favorites' button for each item that appears in their search. The selected item(s) then appear in the 'favorites' section which is linked in the navigation bar/menu. 
 
-As a tourist I want to be able to be able to maximize my day by selecting my location and being prompted with a range of hiking trails, surf spots, and movies to have the best time as possible in Southern California.  
+## CREDITS
+    This project was built by Gold Rush Team. Members include: 
+        •	Charlotte Clark
+        •	Jordan Scott
+        •	Gerardo Sanchez
+
+
+## FEATURES
+    The main features of the application include:
+        •	Search bar
+        •	Navigation Menu
+        •	Favorites List
+
+    
+    ## User Story 
+
+    As a tourist I want to be able to be able to maximize my day by selecting my location and being prompted with a range of hiking trails, surf spots, and movies to have the best time as possible in Southern California.  
 
 
