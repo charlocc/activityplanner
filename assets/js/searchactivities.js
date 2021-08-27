@@ -52,6 +52,8 @@ function searchWeatherApi(city){
                 fontIconSpan.setAttribute("class", "bi-cloud-rain-fill");
             } else if (data.current.condition.text == "Snowing") {
                 fontIconSpan.setAttribute("class", "bi-cloud-snow-fill");
+            } else if (data.current.condition.text == "Overcast") {
+                fontIconSpan.setAttribute("class", "bi-cloud-fill");
             } else {
                 fontIconSpan.style.display= "none";
             }
