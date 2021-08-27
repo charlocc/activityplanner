@@ -50,6 +50,7 @@ video{
     left: 0;}
 
 footer {
+
     position: fixed;
     bottom: 0;
     font-size: x-large;
@@ -87,6 +88,7 @@ footer {
 }
 .fav-card-style1{
   background-color: var(--powder-blue);
+
 }
 
 .fav-card-style2{
@@ -104,7 +106,7 @@ footer {
 }
 
 .card3{
-  height: 30vh;
+  height: 50vh;
 }
 
 
@@ -168,3 +170,8 @@ footer {
   border: rgb(8, 156, 214) solid 2px
 
 } */
+
+#font-icon{
+  font-size: 150px;
+  color: var(--oxford-blue);
+}
