@@ -56,7 +56,7 @@ function searchWeatherApi(city){
             })
             .then(data => {
                 console.log(data);
-                if(data.data) {
+                if(data.data.length!==0) {
                     for (var i=0; i<4; i++) {
                     var container = document.createElement('div');
                     var parkName = document.createElement("h3");
