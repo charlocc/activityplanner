@@ -5,6 +5,10 @@
     --mikado-yellow: #ffc300ff;
     --gold-web-golden: #ffd60aff;
     --orange: #f77f00ff;
+    --sky-blue-crayola: rgba(72, 202, 228, .6);
+    --sky-blue-crayola-2: rgba(144, 224, 239, .6);
+    --blizzard-blue: rgba(173, 232, 244, .7);
+    --powder-blue: rgba(202, 240, 248, .7);
 }
 .overlay
 {
@@ -20,7 +24,19 @@
     font-size: x-large;
 }
 
+.ui-state-default{
+  list-style-type: none;
+  border-color: whitesmoke;
+  background-color:var(--powder-blue);
+  padding: 30px;
+  
 
+}
+
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#sortable li { margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; height: 1.5em; }
+html>body #sortable li { height: 1.5em; line-height: 1.2em; }
+.ui-state-highlight { height: 1.5em; line-height: 1.2em; }
 
 video{
     max-height: 100%;
@@ -69,7 +85,19 @@ footer {
   background-color:  rgba(234, 226, 183, .6);  
 
 }
+.fav-card-style1{
+  background-color: var(--powder-blue);
+}
 
+.fav-card-style2{
+  background-color: var(--blizzard-blue);
+}
+.fav-card-style3{
+  background-color: var(--sky-blue-crayola-2);
+}
+.fav-card-style4{
+  background-color: var(--sky-blue-crayola);
+}
 .card,
 .card2,
 .card3{
@@ -93,3 +121,47 @@ footer {
   background-size: cover;
 
 }
+
+.entertainment-main{
+  min-height: 100vh;
+  background-image: url('https://images.pexels.com/photos/2695679/pexels-photo-2695679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-position: 25% 25%; 
+  background-size: cover;
+  
+}
+.food-main{
+  min-height: 100vh;
+  background-image: url('https://images.pexels.com/photos/1861785/pexels-photo-1861785.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-position: 25% 25%; 
+  background-size: cover;
+
+}
+.weather-main{
+  min-height: 100vh;
+  background-image: url('https://images.pexels.com/photos/196667/pexels-photo-196667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-position: 25% 25%; 
+  background-size: cover;
+
+}
+
+.food-pic{
+  max-width: 100%;
+  max-height:100%;
+  opacity: .7;
+}
+
+/* .col{
+  padding:1rem;
+  color: white;
+  opacity: .4;
+}
+.col1{
+  margin: 2em;
+  color: rgb(0, 0, 0);
+  border: rgb(8, 156, 214) solid 2px
+
+} */
+
