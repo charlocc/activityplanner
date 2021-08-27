@@ -87,6 +87,7 @@ footer {
 }
 .fav-card-style1{
   background-color: var(--powder-blue);
+
 }
 
 .fav-card-style2{
@@ -104,7 +105,7 @@ footer {
 }
 
 .card3{
-  height: 30vh;
+  height: 50vh;
 }
 
 
