@@ -72,9 +72,10 @@ function searchWeatherApi(city){
                     container.appendChild(saveParkBtn);
                     parkResultsEl.appendChild(container);
                     // Container style
-                    container.style.border = "solid black 2px";
-                    container.style.margin = "10px";
+                    container.style.border = "solid white 3px";
+                    container.style.margin = "15px";
                     container.style.padding = "10px";
+                    container.style.borderRadius = "5px";
                     // Button style
                     saveParkBtn.style.color = "#001d3dff";
                     saveParkBtn.style.backgroundColor = "white";
