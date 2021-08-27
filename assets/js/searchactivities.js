@@ -5,6 +5,7 @@ var weatherResultsEl = document.querySelector(".weather-results");
 var parkResultsEl =document.querySelector(".park-results");
 var storedCity = localStorage.getItem('searchedCity');
 searchWeatherApi(storedCity);
+var favoriteParks = []
 
 console.log(storedCity);
 
@@ -62,6 +63,7 @@ function searchWeatherApi(city){
                     var parkName = document.createElement("h3");
                     var parkDescription = document.createElement("p");
                     var saveParkBtn = document.createElement("button");
+                    
                     // Set text content to correspdoning data
                     parkName.textContent=data.data[i].name;
                     parkDescription.textContent=data.data[i].description;
@@ -223,3 +225,13 @@ searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 
 var local = localStorage.getItem("submit")
 
+//added on click function to every button with a .park-results class, traversed dom for h3, and saved value to local storage
+$('.park-results').unbind('click')
+    var saveParkBtnTwo = $(".park-results").on('click', 'button', function (event) {
+        event.preventDefault()
+        var favPark = $(this).siblings().eq(0).text()
+        favoriteParks.push(favPark)
+
+        localStorage.setItem('park', JSON.stringify(favoriteParks))
+
+})
