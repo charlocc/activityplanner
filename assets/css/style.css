@@ -99,10 +99,14 @@ footer {
   background-color: var(--sky-blue-crayola);
 }
 .card,
-.card2,
-.card3{
+.card2{
   min-height: 100vh;
 }
+
+.card3{
+  height: 30vh;
+}
+
 
 #search-main{
   min-height: 100vh;
@@ -164,4 +168,3 @@ footer {
   border: rgb(8, 156, 214) solid 2px
 
 } */
-
