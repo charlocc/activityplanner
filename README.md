@@ -31,6 +31,8 @@
     Instructions for use are printed on the landing page (home screen) url. 
     Further, users are able to 'favorite' items by clicking on the 'add favorites' button for each item that appears in their search. The selected item(s) then appear in the 'favorites' section which is linked in the navigation bar/menu. 
 
+    [search and navigation screenshot] (assets\images\screenshot.gif)
+
 ## CREDITS
     This project was built by Gold Rush Team. Members include: 
         •	Charlotte Clark
