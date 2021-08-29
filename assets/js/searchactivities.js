@@ -1,12 +1,16 @@
 var stateCode = ""
-
+console.log("hello")
 // Search Weather API for city temperature and state name 
 var weatherResultsEl = document.querySelector(".weather-results");
 var parkResultsEl =document.querySelector(".park-results");
 var storedCity = localStorage.getItem('searchedCity');
+var fontIconSpan = document.querySelector("#font-icon");
 searchWeatherApi(storedCity);
+var favoriteParks = []
 
 console.log(storedCity);
+
+
 
 function searchWeatherApi(city){
     var weatherURL = `https://weatherapi-com.p.rapidapi.com/current.json?q=${city}`
@@ -24,7 +28,6 @@ function searchWeatherApi(city){
         console.error(err);
     })
     .then(function(data){
-        // Populate the temperature and conditions on the screen
         console.log(data)
         weatherResultsEl.textContent ="";
         var container = document.createElement('div');
@@ -38,10 +41,32 @@ function searchWeatherApi(city){
         container.appendChild(conditions);
         weatherResultsEl.appendChild(container);
         container.style.color = "#001d3dff";
+            function fontIcon(data){
+            if(data.current.condition.text == "Cloudy"){
+                fontIconSpan.setAttribute("class", "bi-cloud-fill");
+            } else if (data.current.condition.text == "Partly cloudy"){
+                fontIconSpan.setAttribute("class", "bi-cloud-fill");
+            } else if (data.current.condition.text == "Sunny"){
+                fontIconSpan.setAttribute("class", "bi-sun-fill");
+            } else if (data.current.condition.text == "Raining") {
+                fontIconSpan.setAttribute("class", "bi-cloud-rain-fill");
+            } else if (data.current.condition.text == "Snowing") {
+                fontIconSpan.setAttribute("class", "bi-cloud-snow-fill");
+            } else if (data.current.condition.text == "Overcast") {
+                fontIconSpan.setAttribute("class", "bi-cloud-fill");
+            } else if (data.current.condition.text == "Thunder" || "Moderate or heavy rain with thunder") {
+                fontIconSpan.setAttribute("class", "bi-cloud-lightning-rain-fill");
+            } else {
+                fontIconSpan.style.display= "none";
+            }
+            }
+        fontIcon(data);
+
     
-       
+        
         // Find parks in the region
         var stateName=data.location.region;
+        var cityTemp =data.current.temp_f;
         findStateCode(stateName)
             var nationalParkURL = `https://jonahtaylor-national-park-service-v1.p.rapidapi.com/campgrounds?stateCode=${stateCode}`
             fetch(nationalParkURL, {
@@ -62,6 +87,7 @@ function searchWeatherApi(city){
                     var parkName = document.createElement("h3");
                     var parkDescription = document.createElement("p");
                     var saveParkBtn = document.createElement("button");
+                    
                     // Set text content to correspdoning data
                     parkName.textContent=data.data[i].name;
                     parkDescription.textContent=data.data[i].description;
@@ -222,4 +248,16 @@ searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 
 
 var local = localStorage.getItem("submit")
+
+
+//added on click function to every button with a .park-results class, traversed dom for h3, and saved value to local storage
+$('.park-results').unbind('click')
+    var saveParkBtnTwo = $(".park-results").on('click', 'button', function (event) {
+        event.preventDefault()
+        var favPark = $(this).siblings().eq(0).text()
+        favoriteParks.push(favPark)
+
+        localStorage.setItem('park', JSON.stringify(favoriteParks))
+
+})
 

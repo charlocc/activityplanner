@@ -172,3 +172,8 @@ footer {
   border: rgb(8, 156, 214) solid 2px
 
 } */
+
+#font-icon{
+  font-size: 150px;
+  color: var(--oxford-blue);
+}
