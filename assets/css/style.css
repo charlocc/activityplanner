@@ -50,7 +50,6 @@ video{
     left: 0;}
 
 footer {
-
     position: fixed;
     bottom: 0;
     font-size: x-large;
@@ -140,10 +139,13 @@ footer {
   min-height: 100vh;
   background-image: url('https://images.pexels.com/photos/1861785/pexels-photo-1861785.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   background-repeat: no-repeat;
-  background-position: 25% 25%; 
+  background-position: 0 0; 
   background-size: cover;
+  font-size: large; 
+  color: #003566;
+ }
 
-}
+
 .weather-main{
   min-height: 100vh;
   background-image: url('https://images.pexels.com/photos/196667/pexels-photo-196667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
