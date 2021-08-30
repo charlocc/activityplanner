@@ -8,7 +8,7 @@
     This project provided  opportunities to learn many teamwork skills, development methods, and technologies necessary to build robust applications. These include: 
 
         •	HTML structure, syntax, and best practices in indentation and commenting. 
-        •	Bootstrap implementation, including linking, syntax, and grid arrangement.
+        •	Bootstrap implementation: linkage, multiple properties employed, and grid arrangement.
         •	Bootstrap icon generation with <i> elements.
         •	CSS color scheme implementation, including use of global-scope color variables.
         •	CSS image linking and arrangement.
@@ -46,9 +46,5 @@
         •	Navigation Menu
         •	Favorites List
 
-    
-    ## User Story 
-
-    As a tourist I want to be able to be able to maximize my day by selecting my location and being prompted with a range of hiking trails, surf spots, and movies to have the best time as possible in Southern California.  
 
 
