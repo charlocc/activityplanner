@@ -162,3 +162,9 @@ footer {
 }
 
 
+
+#font-icon{
+  font-size: 150px;
+  color: var(--oxford-blue);
+}
+
