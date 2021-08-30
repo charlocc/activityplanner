@@ -257,7 +257,9 @@ $('.park-results').unbind('click')
         var favPark = $(this).siblings().eq(0).text()
         favoriteParks.push(favPark)
 
-        localStorage.setItem('park', JSON.stringify(favoriteParks))
+        var savedFavoriteParks = JSON.parse(localStorage.getItem('park')) || [];
+        savedFavoriteParks.push(favPark)
+        localStorage.setItem('park', JSON.stringify(savedFavoriteParks))
 
 })
 
